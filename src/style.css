@@ -1,0 +1,111 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* cursor: url('assets/cursor_1.png') 0 0, auto; */
+}
+
+canvas {
+  display: block;
+}
+
+
+.onetime{
+  position: fixed;
+  padding-top: 15%;
+  padding-left: 20%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 300px;
+  font-weight: bolder;
+  opacity: 0.3;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+
+#shortcut-ui {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%; 
+  
+  
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px); 
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke-width: 0%;
+  
+  
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.4s ease; 
+}
+
+
+#shortcut-ui.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+.shortcuts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" 200,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+  font-size: 60px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.buttons {
+  display: flex;
+  font-weight: bold;
+  color: #ffa784;
+  flex-direction: column;
+  list-style: none;
+  align-items: end ;
+}
+
+.discription {
+  display: flex;
+  padding-right: 150px;
+  font-weight: bold;
+  flex-direction: column;
+  list-style: none;
+  color: #ceccc6; 
+  align-items: start;
+}
