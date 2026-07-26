@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/my-new-project/',
+  base: '/Fling_Line_V2/',
   build: {
     outDir: 'docs',
     rollupOptions: {
