@@ -74,6 +74,7 @@ window.setup = async function(){
 
   color_wheel = await loadImage('color_wheel.png'); 
   value_wheel = await loadImage('value_wheel.png');
+  satu_wheel = await loadImage('satu_wheel.png');
 
   uilayer = createGraphics(displayWidth, displayHeight);
   canvasLayer = createGraphics(displayWidth, displayHeight);
@@ -213,6 +214,28 @@ window.draw = function() {
       if (currentAngle < 0) currentAngle += TWO_PI; 
       
       currentValue= map(currentAngle, 0, TWO_PI, 0, 100);
+      
+      ballcolor = color(currentHue, currentSatu, currentValue);
+    }
+    colorMode(RGB);
+
+  }else if (showSatuWheel){
+
+    colorMode(HSB, 360, 100, 100);
+    noStroke();
+    
+    push();
+    imageMode(CENTER);
+    image(satu_wheel, width / 2, height / 2);
+    pop();
+
+    let distance = dist(ballPos.x, ballPos.y, wheelX, wheelY);
+    if (distance < wheelRadius*6) {
+      
+      let currentAngle = atan2(ballPos.y - wheelY, ballPos.x - wheelX);
+      if (currentAngle < 0) currentAngle += TWO_PI; 
+      
+      currentSatu= map(currentAngle, 0, TWO_PI, 0, 100);
       
       ballcolor = color(currentHue, currentSatu, currentValue);
     }
