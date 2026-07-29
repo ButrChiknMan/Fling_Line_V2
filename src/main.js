@@ -197,7 +197,9 @@ window.draw = function() {
     }
     colorMode(RGB);
    
-  }else if (showValueWheel){
+  }
+  
+  if (showValueWheel){
 
     colorMode(HSB, 360, 100, 100);
     noStroke();
@@ -219,7 +221,9 @@ window.draw = function() {
     }
     colorMode(RGB);
 
-  }else if (showSatuWheel){
+  }
+  
+  if (showSatuWheel){
 
     colorMode(HSB, 360, 100, 100);
     noStroke();
@@ -316,15 +320,13 @@ window.keyPressed = function() {
     showColorWheel = true;
     wheelX = displayWidth/2; 
     wheelY = displayHeight/2;
-  }
 
-  if (k === '2') {
+  } else if (k === '2') {
     showValueWheel = true;
     wheelX = displayWidth/2; 
     wheelY = displayHeight/2;
-  }
 
-  if (k === '3') {
+  } else if (k === '3') {
     showSatuWheel = true;
     wheelX = displayWidth/2; 
     wheelY = displayHeight/2;
