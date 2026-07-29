@@ -197,9 +197,7 @@ window.draw = function() {
     }
     colorMode(RGB);
    
-  }
-  
-  if (showValueWheel){
+  }else if (showValueWheel){
 
     colorMode(HSB, 360, 100, 100);
     noStroke();
@@ -221,9 +219,7 @@ window.draw = function() {
     }
     colorMode(RGB);
 
-  }
-  
-  if (showSatuWheel){
+  }else if (showSatuWheel){
 
     colorMode(HSB, 360, 100, 100);
     noStroke();
@@ -342,14 +338,15 @@ window.keyReleased = function() {
 
   if (key.toLowerCase() === '1') {
     showColorWheel = false;
-  }
-
-  if (key.toLowerCase() === '2') {
     showValueWheel = false;
-   
-  }
-
-  if (key.toLowerCase() === '3') {
+    showSatuWheel = false;
+  }else if (key.toLowerCase() === '2') {
+    showColorWheel = false;
+    showValueWheel = false;
+    showSatuWheel = false;
+  }else if (key.toLowerCase() === '3') {
+    showColorWheel = false;
+    showValueWheel = false;
     showSatuWheel = false;
   }
 }
