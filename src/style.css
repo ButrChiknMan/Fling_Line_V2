@@ -28,6 +28,12 @@ canvas {
   
 }
 
+#instruct {
+  position:absolute;
+  align-content: center ;
+}
+
+
 #shortcut-ui {
   position: absolute;
   justify-content: center;
